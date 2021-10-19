@@ -155,3 +155,88 @@ console.log(hoist);
 
 
 
+console.clear();
+
+/*
+    BASIC MATH OPERATIONS
+*/
+
+
+//  Addition
+let sum = 5 + 5;
+console.log(sum);
+sum += 5; // sum = sum + 5
+console.log(sum);
+sum ++; // sum = sum + 1
+console.log(sum);
+
+
+// Subtraction
+let diff = 5 - 5;
+console.log(diff);
+diff -= 5; // diff = diff - 5
+console.log(diff);
+diff --; // diff = diff -1
+console.log(diff);
+
+
+// Multiplication
+let prod = 5 * 5;
+console.log(prod)
+prod *= 5; // prod = prod * 5
+console.log(prod);
+
+
+// Division
+let quotient = 25 / 5;
+console.log(quotient);
+quotient /= 5; // quotient = quotient / 5
+console.log(quotient);
+
+// Exponents
+let square = 5 ** 2;
+console.log(square);
+square **= 2; // square = square ** 2
+console.log(square);
+
+// Modulo
+let remainder = 19 % 4;
+console.log(remainder);
+remainder %= 2; // remainder = remainder % 2
+console.log(remainder);
+
+// Floor Division
+let floor = Math.floor(10/3);
+console.log(floor);
+
+// Ceiling Division
+let ceil = Math.ceil(10/3);
+console.log(ceil);
+
+
+//  String Concatenation
+let myString = 'My age is '
+let myStringAge = 45
+
+let addedString = myString + myStringAge
+console.log(addedString);
+
+let crazyStuff = square + '4'
+console.log(crazyStuff);
+
+// operators other than + will result in that integer operation rather than a string concat
+let moreCrazyStuff = 625 * '4'
+console.log(moreCrazyStuff);
+
+
+/*
+    JavaScript Comparisons
+*/
+console.clear();
+
+console.log(5 == 5);
+console.log(5 == 5.0);
+console.log(5 == '5'); // == is coersive comparison. loose equality operator. allows for type conversion
+console.log(5 === '5') // === strict equality operatore. doesnt allow for type conversion
+
+
