@@ -239,4 +239,224 @@ console.log(5 == 5.0);
 console.log(5 == '5'); // == is coersive comparison. loose equality operator. allows for type conversion
 console.log(5 === '5') // === strict equality operatore. doesnt allow for type conversion
 
+console.log(1 == true);
+
+console.log('10' > 5);
+
+
+let x = '10';
+let y = '9';
+
+console.log(x < y); // watch out!
+
+
+let arr1 = [1, 2, 3, 4];
+let arr2 = [1, 2, 3, 4];
+
+console.log(arr1 == arr2); // false. looks at the variables place in memory so it returns false because they are stored in different locations
+
+let newArr = ['cat', 'dog', 'pig']
+
+let newerArr = newArr;
+
+console.log(newArr === newerArr);
+console.log(newArr === ['cat', 'dog', 'pig']);
+console.log(newerArr === ['cat', 'dog', 'pig']);
+
+
+// Greater Than (>), Greater Than or Equal (>=), Less Than (<), Less Than or Equal (<=)
+// Equal allow type conversion (==). Equal no type conversion (===),
+// Not Equal yes converison (!=), Not Equal no conversion (!===)
+
+
+
+//  Control Flow
+let newNumber = 30;
+
+console.log('Begin')
+if (newNumber > 65){
+    console.log('Senior')
+} else if (newNumber > 30){
+    console.log('Adult')
+} else {
+    console.log('Child')
+}
+console.log('End');
+
+
+// Ternary Operator - (condition) ? value if true : value if false
+//                condition     if true     if false
+let ageGroup = (newNumber > 65) ? 'Senior' : 'Adult';
+
+console.log(ageGroup);
+
+let ageGroup2 = (newNumber > 65) ? 'Senior' : (newNumber > 30) ? 'Adult': 'Child'; 
+
+console.log(ageGroup2);
+
+// && = and
+if (newNumber > 18 && newNumber < 40){
+    console.log('Young Adult')
+};
+
+// || = or
+if (newNumber > 18 || newNumber < 40){
+    console.log('Young Adult')
+};
+
+
+
+console.clear();
+/* 
+    JS Loops
+    for, for...in, for...of, while, do while
+*/
+
+
+// Standard For loop
+// for (counter; expression/condition; incrementation/decrementation){code to execute each loop}
+
+console.log('Loop has started');
+
+for (let i = 0; i <= 20; i++){
+    console.log(i)
+};
+
+console.log('Loop has ended');
+
+
+
+console.log('Loop has started');
+
+for (let i = 20; i > 0; i-=5){
+    console.log(i)
+};
+
+console.log('Loop has ended');
+
+
+// for... in
+let teams ={
+    mlb: 'Mets',
+    nba: 'Bulls',
+    nfl: 'Giants',
+    nhl: 'Islanders'
+};
+
+for (let abc in teams){
+    console.log(abc)
+    console.log(teams[abc])
+};
+
+
+// for... of
+let planets = ['Mars', 'Jupiter', 'Earth', 'Mercury', 'Saturn']
+
+for (let p of planets){
+    console.log(p);
+};
+
+
+// while loop
+// while (condition){}
+let num1 = 1
+
+while (num1 < 25){
+    console.log(num1)
+    num1 += 5
+};
+
+
+
+// Do While Loop ... Do the first portion AT LEAST ONCE
+// If the while condition is still met, continue the while loop
+// do {code to execute} while (condition)
+
+let k = 0
+do{
+    console.log(k)
+    k++
+} while (k > 10);
+
+
+
+for (let p of planets){
+    if (p == 'Earth'){
+        console.log('Nice place to live...for now')
+    } else {
+        console.log('Inhabitable')
+    }
+}
+
+
+
+console.clear()
+
+
+/* 
+    JS User Defined Functions
+*/
+
+
+// Regular Named Function
+function addNums(){
+    let num1 = 4;
+    let num2 = 5;
+
+    return num1 + num2;
+};
+
+console.log(addNums());
+
+
+// Regular Named Function with Parameters
+function addNums2(num1, num2){
+    return num1 + num2
+}
+console.log(addNums2(3, 2));
+
+
+// Variable Named Function
+let addNums3 = function(){
+    let num1 = 10;
+    let num2 = 20;
+
+    return num1 + num2;
+};
+console.log(addNums3());
+
+// Variable Named Function with parameters
+let addNums4 = function(num1, num2){
+    return num1 + num2
+};
+console.log(addNums4(53, 75));
+
+
+console.log(`10 + 17 = ${addNums2(10, 17)}`)
+
+
+
+
+//  Arrow Functions
+//  variableName = () => {} *return and {} optional if one liner
+
+// with more than one parameter
+let multiplyNums = (num1, num2) => num1 * num2;
+
+// If only one parameter and only one, you dont need the parentheses
+let greetPerson = person => `Hello ${person}!`
+
+// with empty parameter
+let addNums5 = () => 5 + 19
+
+
+let findMaxNum = (arr) => {
+    let max = 0
+    for (let num of arr){
+        if (num > max){
+            max = num
+        }
+    }
+    return max
+}
 
