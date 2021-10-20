@@ -438,7 +438,7 @@ console.log(`10 + 17 = ${addNums2(10, 17)}`)
 
 
 //  Arrow Functions
-//  variableName = () => {} *return and {} optional if one liner
+//  variableName = () => {} * return and {} optional if one liner
 
 // with more than one parameter
 let multiplyNums = (num1, num2) => num1 * num2;
